@@ -220,7 +220,7 @@ namespace treeAndGraph
             private string getPath(Vertex ver1, Vertex ver2)
             {
                 var path = ver2.value;
-                while (ver1 != ver2)
+                while (ver1.value != ver2.value)
                 {
                     ver2 = getInfoForVertex(ver2).previous;
                     path = ver2.value + " " + path;
